@@ -10,8 +10,9 @@ public class PeopleTest {
     @Test
     public void testObject(){
         people = new People();
-        people.createNewPerson("hala","ali");
+
         Person expected = new Person("hala","ali");
-        Assert.assertNotNull(people.findAll());
+        Assert.assertEquals(new Person("hala","ali"),people.createNewPerson("hala","ali"));
+        //Assert.assertNotNull(people.findAll());
     }
 }
