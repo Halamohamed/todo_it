@@ -16,4 +16,14 @@ public class PersonSequencerTest {
         personSequencer.reset();
         Assert.assertEquals(null,personSequencer);
     }
+
+    @Test
+    public void test(){
+
+        int expected = 2;
+        PersonSequencer.nextPersonId();
+        personSequencer.nextPersonId();
+        int actual = PersonSequencer.nextPersonId();
+        Assert.assertEquals(expected,actual);
+    }
 }

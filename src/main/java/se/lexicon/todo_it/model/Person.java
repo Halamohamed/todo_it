@@ -7,9 +7,17 @@ public class Person {
     private String lastName;
 
     public Person(String firstName, String lastName) {
-        this.id = personId + 1;
+        setId();
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    private void setId() {
+        id = personId + 1;
+    }
+
+    public int getId(){
+        return id;
     }
 
     public String getFirstName() {
