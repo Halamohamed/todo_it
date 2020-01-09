@@ -11,8 +11,12 @@ public class PeopleTest {
     public void testObject(){
         people = new People();
 
-        Person expected = new Person("hala","ali");
-        Assert.assertEquals(new Person("hala","ali"),people.createNewPerson("hala","ali"));
-        //Assert.assertNotNull(people.findAll());
+        Person expected = new Person(0,"hala","ali");
+        people.createNewPerson("hala","ali");
+        //Assert.assertEquals(expected,people.createNewPerson("hala","ali"));
+        Assert.assertNotNull(people.findAll());
+        Assert.assertEquals(1, people.size());
+        people.clear();
+        Assert.assertEquals(0,people.size());
     }
 }

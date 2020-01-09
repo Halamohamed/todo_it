@@ -6,14 +6,14 @@ public class Person {
     private String firstName;
     private String lastName;
 
-    public Person(String firstName, String lastName) {
-        setId();
+    public Person(int personId, String firstName, String lastName) {
+        this.id = personId;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    private void setId() {
-        id = personId + 1;
+    private void setId(int id) {
+        this.id = id;
     }
 
     public int getId(){

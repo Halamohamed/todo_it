@@ -9,12 +9,12 @@ public class PersonTest {
 
     @Test
     public void testConstructor(){
-      person = new Person("hala", "ali");
+      person = new Person(1,"hala", "ali");
       String expected = "hala";
         Assert.assertEquals(expected, person.getFirstName());
         Assert.assertEquals("ali", person.getLastName());
         Assert.assertEquals("Person{" +
-                "id=" + 2 +
+                "id=" + 1 +
                 ", firstName='" + "hala" + '\'' +
                 ", lastName='" + "ali" + '\'' +
                 '}', person.toString());
